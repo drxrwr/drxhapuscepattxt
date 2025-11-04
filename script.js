@@ -57,6 +57,10 @@ cutBtn.addEventListener("click", () => {
     remainResult = validNumbers.slice(0, validNumbers.length - cutCount);
   }
 
+  // Update placeholder sesuai jumlah hasil
+  cutFileName.placeholder = `Default: ${cutResult.length}.txt`;
+  remainFileName.placeholder = `Default: ${remainResult.length}.txt`;
+
   resultSection.classList.remove("hidden");
 });
 
