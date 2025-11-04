@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Potong File TXT Nomor Telepon</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Potong File TXT Nomor Telepon</h1>
+
+    <div class="upload-section">
+      <input type="file" id="fileInput" accept=".txt">
+    </div>
+
+    <div class="info">
+      <p><b>Jumlah Nomor Valid:</b> <span id="countValid">0</span></p>
+    </div>
+
+    <textarea id="fileContent" placeholder="Isi file akan tampil di sini..." spellcheck="false"></textarea>
+
+    <div class="controls">
+      <label for="cutCount">Jumlah yang mau dipotong:</label>
+      <input type="number" id="cutCount" min="1" placeholder="Masukkan jumlah...">
+
+      <div class="radio-group">
+        <label><input type="radio" name="direction" value="top" checked> Dari atas</label>
+        <label><input type="radio" name="direction" value="bottom"> Dari bawah</label>
+      </div>
+
+      <button id="cutBtn" class="green-btn">Potong Sekarang</button>
+    </div>
+
+    <div id="resultSection" class="hidden">
+      <h2>Hasil Pemotongan</h2>
+
+      <div class="result-box">
+        <label>Nama file hasil potongan:</label>
+        <input type="text" id="cutFileName" placeholder="(default: jumlah isi)">
+        <button id="downloadCut" class="green-btn">Download Hasil Potong</button>
+      </div>
+
+      <div class="result-box">
+        <label>Nama file sisa:</label>
+        <input type="text" id="remainFileName" placeholder="(default: jumlah isi)">
+        <button id="downloadRemain" class="green-btn">Download Sisa</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
